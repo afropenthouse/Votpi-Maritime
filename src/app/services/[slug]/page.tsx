@@ -82,18 +82,12 @@ const faqs = [
   },
 ];
 
-export default async function ServicePage({
-  params,
-}: {
-  params: Promise<{ slug: string }>;
-}) {
+export default async function ServicePage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const service = getServiceBySlug(slug);
   if (!service) notFound();
 
-  const relatedServices = services
-    .filter((s) => s.slug !== service.slug)
-    .slice(0, 3);
+  const relatedServices = services.filter((s) => s.slug !== service.slug).slice(0, 3);
 
   return (
     <main>
@@ -175,7 +169,9 @@ export default async function ServicePage({
       <section className="bg-background py-20">
         <div className="mx-auto max-w-7xl px-5 md:px-10">
           <div className="mx-auto max-w-4xl">
-            <h2 className="text-center text-3xl font-semibold uppercase">Frequently Asked Questions</h2>
+            <h2 className="text-center text-3xl font-semibold uppercase">
+              Frequently Asked Questions
+            </h2>
           </div>
           <ServiceFAQ items={faqs} />
         </div>
@@ -190,27 +186,26 @@ export default async function ServicePage({
             </p>
             <div className="mt-12 grid gap-8 md:grid-cols-3">
               {relatedServices.map((s) => {
-              const Icon = s.icon;
-              return (
-                <Link
-                  key={s.slug}
-                  href={`/services/${s.slug}`}
-                  className="group block rounded-lg border border-border bg-background p-8 transition-all hover:shadow-lg"
-                >
-                  <div className="mb-4 flex size-12 items-center justify-center rounded-full bg-accent/10">
-                    <Icon className="size-6 text-accent" aria-hidden="true" />
-                  </div>
-                  <h3 className="text-xl font-semibold uppercase group-hover:text-accent">
-                    {s.title}
-                  </h3>
-                  <p className="mt-2 text-sm text-muted-foreground line-clamp-3">
-                    {s.tagline}
-                  </p>
-                  <span className="mt-4 inline-flex items-center gap-1 text-xs font-bold uppercase tracking-widest text-accent">
-                    Learn more <ArrowRight className="size-3 transition-transform group-hover:translate-x-1" />
-                  </span>
-                </Link>
-              );
+                const Icon = s.icon;
+                return (
+                  <Link
+                    key={s.slug}
+                    href={`/services/${s.slug}`}
+                    className="group block rounded-lg border border-border bg-background p-8 transition-all hover:shadow-lg"
+                  >
+                    <div className="mb-4 flex size-12 items-center justify-center rounded-full bg-accent/10">
+                      <Icon className="size-6 text-accent" aria-hidden="true" />
+                    </div>
+                    <h3 className="text-xl font-semibold uppercase group-hover:text-accent">
+                      {s.title}
+                    </h3>
+                    <p className="mt-2 text-sm text-muted-foreground line-clamp-3">{s.tagline}</p>
+                    <span className="mt-4 inline-flex items-center gap-1 text-xs font-bold uppercase tracking-widest text-accent">
+                      Learn more{" "}
+                      <ArrowRight className="size-3 transition-transform group-hover:translate-x-1" />
+                    </span>
+                  </Link>
+                );
               })}
             </div>
           </div>

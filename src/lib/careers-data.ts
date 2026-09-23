@@ -35,8 +35,7 @@ export const careers: CareersState = {
     "compliance",
     "commercial-support",
   ],
-  note:
-    "No current vacancies are published. Send a concise expression of interest and CV for future consideration. Unsolicited applications do not guarantee engagement.",
+  note: "No current vacancies are published. Send a concise expression of interest and CV for future consideration. Unsolicited applications do not guarantee engagement.",
 };
 
 export function interestAreaMailto(

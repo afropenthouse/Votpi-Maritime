@@ -47,17 +47,13 @@ export default function NewsPage() {
                     {article.readingTimeMinutes} min read
                   </span>
                   {article.verified && (
-                    <span className="rounded bg-accent/15 px-2 py-0.5 text-accent">
-                      Verified
-                    </span>
+                    <span className="rounded bg-accent/15 px-2 py-0.5 text-accent">Verified</span>
                   )}
                 </div>
                 <h2 className="mt-5 text-3xl font-semibold uppercase leading-tight md:text-4xl">
                   {article.title}
                 </h2>
-                <p className="mt-5 max-w-3xl leading-7 text-muted-foreground">
-                  {article.excerpt}
-                </p>
+                <p className="mt-5 max-w-3xl leading-7 text-muted-foreground">{article.excerpt}</p>
                 <div className="mt-8">
                   <Button asChild variant="outline" size="lg">
                     <Link href={`/news/${article.slug}`}>

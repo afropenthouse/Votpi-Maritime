@@ -53,9 +53,7 @@ export default function CompliancePage() {
               <p className="text-xs font-bold uppercase tracking-widest text-accent">
                 Current status
               </p>
-              <h2 className="mt-3 text-2xl font-semibold uppercase">
-                {compliance.statusLabel}
-              </h2>
+              <h2 className="mt-3 text-2xl font-semibold uppercase">{compliance.statusLabel}</h2>
               <p className="mt-3 text-sm leading-6 text-muted-foreground">
                 {compliance.statusNote}
               </p>
@@ -70,8 +68,8 @@ export default function CompliancePage() {
                 <li>Authorised documents only</li>
               </ul>
               <p className="mt-4 text-sm leading-6 text-muted-foreground">
-                No certificate images, logos, document numbers, expiry dates or approval
-                references are displayed.
+                No certificate images, logos, document numbers, expiry dates or approval references
+                are displayed.
               </p>
             </article>
           </div>

@@ -124,7 +124,7 @@ export type Vessel = {
 
 export type FleetApprovalStatus = "pending" | "approved";
 
-export const fleetApprovalStatus: FleetApprovalStatus = "pending";
+export const fleetApprovalStatus = "pending" as FleetApprovalStatus;
 
 export const isFleetApproved: boolean = fleetApprovalStatus === "approved";
 

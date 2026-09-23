@@ -3,11 +3,7 @@ import Link from "next/link";
 import { ArrowRight, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { PageHero } from "@/components/site-sections";
-import {
-  careers,
-  INTEREST_AREA_LABELS,
-  interestAreaMailto,
-} from "@/lib/careers-data";
+import { careers, INTEREST_AREA_LABELS, interestAreaMailto } from "@/lib/careers-data";
 
 export const metadata: Metadata = {
   title: "Careers | VOTPI Maritime",

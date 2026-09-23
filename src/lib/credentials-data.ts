@@ -1,15 +1,7 @@
 export type CredentialAuthorityCategory =
-  | "maritime"
-  | "petroleum"
-  | "customs"
-  | "port-authority"
-  | "defence"
-  | "environmental";
+  "maritime" | "petroleum" | "customs" | "port-authority" | "defence" | "environmental";
 
-export const CREDENTIAL_AUTHORITY_CATEGORY_LABELS: Record<
-  CredentialAuthorityCategory,
-  string
-> = {
+export const CREDENTIAL_AUTHORITY_CATEGORY_LABELS: Record<CredentialAuthorityCategory, string> = {
   maritime: "Maritime administration",
   petroleum: "Petroleum regulation",
   customs: "Customs & trade",

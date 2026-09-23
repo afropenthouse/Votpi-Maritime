@@ -86,9 +86,7 @@ export default async function NewsDetailPage({ params }: Props) {
                 <dt className="text-xs font-bold uppercase tracking-widest text-accent">
                   Category
                 </dt>
-                <dd className="mt-1 text-foreground">
-                  {NEWS_CATEGORY_LABELS[article.category]}
-                </dd>
+                <dd className="mt-1 text-foreground">{NEWS_CATEGORY_LABELS[article.category]}</dd>
               </div>
               <div>
                 <dt className="text-xs font-bold uppercase tracking-widest text-accent">
