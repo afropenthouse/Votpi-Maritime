@@ -42,11 +42,31 @@ export const services: Service[] = [
       "Comprehensive cargo documentation including quality certificates",
     ],
     process: [
-      { step: "Inquiry", title: "Requirements & Planning", text: "Share your cargo details, route and timing with our chartering team." },
-      { step: "Availability", title: "Vessel Allocation", text: "We confirm vessel availability, suitability and commercial terms." },
-      { step: "Vetting", title: "Safety & Compliance Check", text: "Vessel undergoes commercial, technical and safety vetting." },
-      { step: "Execution", title: "Loading & Voyage", text: "Cargo is loaded under supervision and the vessel sails to destination." },
-      { step: "Delivery", title: "Discharge & Reporting", text: "Cargo is discharged and a complete voyage report is provided." },
+      {
+        step: "Inquiry",
+        title: "Requirements & Planning",
+        text: "Share your cargo details, route and timing with our chartering team.",
+      },
+      {
+        step: "Availability",
+        title: "Vessel Allocation",
+        text: "We confirm vessel availability, suitability and commercial terms.",
+      },
+      {
+        step: "Vetting",
+        title: "Safety & Compliance Check",
+        text: "Vessel undergoes commercial, technical and safety vetting.",
+      },
+      {
+        step: "Execution",
+        title: "Loading & Voyage",
+        text: "Cargo is loaded under supervision and the vessel sails to destination.",
+      },
+      {
+        step: "Delivery",
+        title: "Discharge & Reporting",
+        text: "Cargo is discharged and a complete voyage report is provided.",
+      },
     ],
     features: [
       {
@@ -85,10 +105,26 @@ export const services: Service[] = [
       "Dedicated operations support throughout the charter period",
     ],
     process: [
-      { step: "Charter Party", title: "Terms Negotiation", text: "Commercial and operational terms are confirmed in the charter party." },
-      { step: "Vessel Handover", title: "Technical Handover", text: "Vessel condition, equipment status and documentation are reviewed." },
-      { step: "Deployment", title: "Operational Activation", text: "Vessel is positioned and made ready for cargo loading per schedule." },
-      { step: "Monitoring", title: "Voyage Supervision", text: "Operations and cargo teams monitor progress and coordinate discharge." },
+      {
+        step: "Charter Party",
+        title: "Terms Negotiation",
+        text: "Commercial and operational terms are confirmed in the charter party.",
+      },
+      {
+        step: "Vessel Handover",
+        title: "Technical Handover",
+        text: "Vessel condition, equipment status and documentation are reviewed.",
+      },
+      {
+        step: "Deployment",
+        title: "Operational Activation",
+        text: "Vessel is positioned and made ready for cargo loading per schedule.",
+      },
+      {
+        step: "Monitoring",
+        title: "Voyage Supervision",
+        text: "Operations and cargo teams monitor progress and coordinate discharge.",
+      },
     ],
     features: [
       {
@@ -127,10 +163,26 @@ export const services: Service[] = [
       "Integration with pipeline and trucking for inland delivery",
     ],
     process: [
-      { step: "Planning", title: "Route & Schedule Planning", text: "We plan the optimal marine route, berth windows and multimodal connections." },
-      { step: "Coordination", title: "Port & Documentation", text: "Port clearances, customs declarations and terminal slots are secured." },
-      { step: "Execution", title: "Cargo Movement", text: "Loading and discharge are supervised, with real-time status updates." },
-      { step: "Delivery", title: "Multimodal Hand-off", text: "Cargo is transferred to pipeline or trucking for final delivery." },
+      {
+        step: "Planning",
+        title: "Route & Schedule Planning",
+        text: "We plan the optimal marine route, berth windows and multimodal connections.",
+      },
+      {
+        step: "Coordination",
+        title: "Port & Documentation",
+        text: "Port clearances, customs declarations and terminal slots are secured.",
+      },
+      {
+        step: "Execution",
+        title: "Cargo Movement",
+        text: "Loading and discharge are supervised, with real-time status updates.",
+      },
+      {
+        step: "Delivery",
+        title: "Multimodal Hand-off",
+        text: "Cargo is transferred to pipeline or trucking for final delivery.",
+      },
     ],
     features: [
       {
@@ -169,10 +221,26 @@ export const services: Service[] = [
       "Full cargo and safety documentation provided per voyage",
     ],
     process: [
-      { step: "Schedule", title: "Refinery Coordination", text: "We coordinate loading windows directly with the refinery and receiving terminal." },
-      { step: "Inspect", title: "Cargo Sampling & Verification", text: "Independent sampling and quality checks are conducted before and during loading." },
-      { step: "Transport", title: "Safe Transit", text: "Vessel transits to the terminal under continuous monitoring and reporting." },
-      { step: "Deliver", title: "Terminal Discharge", text: "Pre-arrival notification enables efficient discharge and cargo handover." },
+      {
+        step: "Schedule",
+        title: "Refinery Coordination",
+        text: "We coordinate loading windows directly with the refinery and receiving terminal.",
+      },
+      {
+        step: "Inspect",
+        title: "Cargo Sampling & Verification",
+        text: "Independent sampling and quality checks are conducted before and during loading.",
+      },
+      {
+        step: "Transport",
+        title: "Safe Transit",
+        text: "Vessel transits to the terminal under continuous monitoring and reporting.",
+      },
+      {
+        step: "Deliver",
+        title: "Terminal Discharge",
+        text: "Pre-arrival notification enables efficient discharge and cargo handover.",
+      },
     ],
     features: [
       {
@@ -211,11 +279,31 @@ export const services: Service[] = [
       "Real-time tracking with proactive delay notifications",
     ],
     process: [
-      { step: "Booking", title: "Cargo & Route Planning", text: "Cargo details and routing preferences are confirmed for the coastal transit." },
-      { step: "Vessel", title: "Deployment Confirmation", text: "A suitable vessel is assigned and positioned for loading." },
-      { step: "Loading", title: "Cargo Handling", text: "Loading proceeds under supervision with quality checks at each stage." },
-      { step: "Transit", title: "Coastal Navigation", text: "Vessel transits with weather routing to optimise speed and fuel economy." },
-      { step: "Arrival", title: "Discharge & Delivery", text: "Pre-arrival coordination ensures efficient discharge at destination." },
+      {
+        step: "Booking",
+        title: "Cargo & Route Planning",
+        text: "Cargo details and routing preferences are confirmed for the coastal transit.",
+      },
+      {
+        step: "Vessel",
+        title: "Deployment Confirmation",
+        text: "A suitable vessel is assigned and positioned for loading.",
+      },
+      {
+        step: "Loading",
+        title: "Cargo Handling",
+        text: "Loading proceeds under supervision with quality checks at each stage.",
+      },
+      {
+        step: "Transit",
+        title: "Coastal Navigation",
+        text: "Vessel transits with weather routing to optimise speed and fuel economy.",
+      },
+      {
+        step: "Arrival",
+        title: "Discharge & Delivery",
+        text: "Pre-arrival coordination ensures efficient discharge at destination.",
+      },
     ],
     features: [
       {
@@ -255,10 +343,26 @@ export const services: Service[] = [
       "Class society audit preparation and regulatory compliance support",
     ],
     process: [
-      { step: "Handover", title: "Management Agreement", text: "Vessel is transferred to our management with full documentation review." },
-      { step: "Setup", title: "Systems & Protocols", text: "Safety management systems, maintenance schedules and crew rosters are established." },
-      { step: "Ongoing", title: "Daily Operations", text: "Continuous technical, crewing and supply chain management throughout the contract." },
-      { step: "Review", title: "Performance Reporting", text: "Regular performance reports and cost reconciliations are provided." },
+      {
+        step: "Handover",
+        title: "Management Agreement",
+        text: "Vessel is transferred to our management with full documentation review.",
+      },
+      {
+        step: "Setup",
+        title: "Systems & Protocols",
+        text: "Safety management systems, maintenance schedules and crew rosters are established.",
+      },
+      {
+        step: "Ongoing",
+        title: "Daily Operations",
+        text: "Continuous technical, crewing and supply chain management throughout the contract.",
+      },
+      {
+        step: "Review",
+        title: "Performance Reporting",
+        text: "Regular performance reports and cost reconciliations are provided.",
+      },
     ],
     features: [
       {
@@ -297,10 +401,26 @@ export const services: Service[] = [
       "Direct relationships with port authorities and terminal operators",
     ],
     process: [
-      { step: "Notice", title: "Arrival Coordination", text: "Advanced notice of vessel arrival triggers port and berth confirmation." },
-      { step: "Clearance", title: "Documentation Processing", text: "Customs, immigration and port authority clearances are expedited." },
-      { step: "Operations", title: "Cargo Supervision", text: "Loading or discharge is supervised with quality checks and status updates." },
-      { step: "Departure", title: "Final Reporting", text: "Vessel departs with full voyage report and documentation package." },
+      {
+        step: "Notice",
+        title: "Arrival Coordination",
+        text: "Advanced notice of vessel arrival triggers port and berth confirmation.",
+      },
+      {
+        step: "Clearance",
+        title: "Documentation Processing",
+        text: "Customs, immigration and port authority clearances are expedited.",
+      },
+      {
+        step: "Operations",
+        title: "Cargo Supervision",
+        text: "Loading or discharge is supervised with quality checks and status updates.",
+      },
+      {
+        step: "Departure",
+        title: "Final Reporting",
+        text: "Vessel departs with full voyage report and documentation package.",
+      },
     ],
     features: [
       {
@@ -339,10 +459,26 @@ export const services: Service[] = [
       "Photographic evidence and comprehensive written reports",
     ],
     process: [
-      { step: "Booking", title: "Survey Request", text: "Survey requirements are confirmed with timing and documentation needs." },
-      { step: "Inspection", title: "On-Site Survey", text: "Marine surveyor conducts quantity, quality and condition checks." },
-      { step: "Testing", title: "Laboratory Analysis", text: "Samples are tested against ISO and client-specified parameters." },
-      { step: "Reporting", title: "Deliverables", text: "Survey reports, certificates and supporting evidence are issued." },
+      {
+        step: "Booking",
+        title: "Survey Request",
+        text: "Survey requirements are confirmed with timing and documentation needs.",
+      },
+      {
+        step: "Inspection",
+        title: "On-Site Survey",
+        text: "Marine surveyor conducts quantity, quality and condition checks.",
+      },
+      {
+        step: "Testing",
+        title: "Laboratory Analysis",
+        text: "Samples are tested against ISO and client-specified parameters.",
+      },
+      {
+        step: "Reporting",
+        title: "Deliverables",
+        text: "Survey reports, certificates and supporting evidence are issued.",
+      },
     ],
     features: [
       {
@@ -382,10 +518,26 @@ export const services: Service[] = [
       "24/7 coordination for urgent or emergency bunker requirements",
     ],
     process: [
-      { step: "Order", title: "Bunker Requirement", text: "Vessel's bunker requirements and delivery window are confirmed." },
-      { step: "Source", title: "Supplier Selection", text: "We source fuel from approved refinery or terminal suppliers." },
-      { step: "Deliver", title: "Bunkering Operation", text: "Fuel is delivered with quantity verification and quality sampling." },
-      { step: "Verify", title: "Quality Testing", text: "Samples are tested and results are provided before sign-off." },
+      {
+        step: "Order",
+        title: "Bunker Requirement",
+        text: "Vessel's bunker requirements and delivery window are confirmed.",
+      },
+      {
+        step: "Source",
+        title: "Supplier Selection",
+        text: "We source fuel from approved refinery or terminal suppliers.",
+      },
+      {
+        step: "Deliver",
+        title: "Bunkering Operation",
+        text: "Fuel is delivered with quantity verification and quality sampling.",
+      },
+      {
+        step: "Verify",
+        title: "Quality Testing",
+        text: "Samples are tested and results are provided before sign-off.",
+      },
     ],
     features: [
       {
@@ -425,10 +577,26 @@ export const services: Service[] = [
       "Quality assurance and post-docking sea trial verification",
     ],
     process: [
-      { step: "Survey", title: "Pre-Docking Assessment", text: "Vessel is surveyed and dry-docking scope is defined with budget plan." },
-      { step: "Yard", title: "Shipyard Selection", text: "Qualified shipyard is selected and docking period is scheduled." },
-      { step: "Execute", title: "Repair & Maintenance", text: "Work proceeds with quality control and progress reporting." },
-      { step: "Complete", title: "Sea Trial & Delivery", text: "Post-docking sea trial and final certification ensure compliance." },
+      {
+        step: "Survey",
+        title: "Pre-Docking Assessment",
+        text: "Vessel is surveyed and dry-docking scope is defined with budget plan.",
+      },
+      {
+        step: "Yard",
+        title: "Shipyard Selection",
+        text: "Qualified shipyard is selected and docking period is scheduled.",
+      },
+      {
+        step: "Execute",
+        title: "Repair & Maintenance",
+        text: "Work proceeds with quality control and progress reporting.",
+      },
+      {
+        step: "Complete",
+        title: "Sea Trial & Delivery",
+        text: "Post-docking sea trial and final certification ensure compliance.",
+      },
     ],
     features: [
       {
@@ -468,10 +636,26 @@ export const services: Service[] = [
       "Cleanliness certificates issued before vessel is approved for loading",
     ],
     process: [
-      { step: "Prepare", title: "Pre-Cleaning Inspection", text: "Tank condition is assessed and cleaning plan is established." },
-      { step: "Clean", title: "Residue Removal", text: "High-pressure cleaning and chemical treatment remove all residues." },
-      { step: "Gas-Free", title: "Inert Gas Stripping", text: "Tanks are gas-freed with continuous atmosphere monitoring." },
-      { step: "Verify", title: "Inspection & Certification", text: "Tank is inspected, tested and certified clean for loading." },
+      {
+        step: "Prepare",
+        title: "Pre-Cleaning Inspection",
+        text: "Tank condition is assessed and cleaning plan is established.",
+      },
+      {
+        step: "Clean",
+        title: "Residue Removal",
+        text: "High-pressure cleaning and chemical treatment remove all residues.",
+      },
+      {
+        step: "Gas-Free",
+        title: "Inert Gas Stripping",
+        text: "Tanks are gas-freed with continuous atmosphere monitoring.",
+      },
+      {
+        step: "Verify",
+        title: "Inspection & Certification",
+        text: "Tank is inspected, tested and certified clean for loading.",
+      },
     ],
     features: [
       {
@@ -511,10 +695,26 @@ export const services: Service[] = [
       "Expert testimony and documentation for cargo claims resolution",
     ],
     process: [
-      { step: "Sample", title: "Collection", text: "Representative samples are collected using ISO-standard protocols." },
-      { step: "Test", title: "Laboratory Analysis", text: "Samples are analysed for all specified quality parameters." },
-      { step: "Report", title: "Results Delivery", text: "Detailed analytical certificates and interpretation are issued." },
-      { step: "Review", title: "Claims Support", text: "Expert analysis supports cargo claims and quality dispute resolution." },
+      {
+        step: "Sample",
+        title: "Collection",
+        text: "Representative samples are collected using ISO-standard protocols.",
+      },
+      {
+        step: "Test",
+        title: "Laboratory Analysis",
+        text: "Samples are analysed for all specified quality parameters.",
+      },
+      {
+        step: "Report",
+        title: "Results Delivery",
+        text: "Detailed analytical certificates and interpretation are issued.",
+      },
+      {
+        step: "Review",
+        title: "Claims Support",
+        text: "Expert analysis supports cargo claims and quality dispute resolution.",
+      },
     ],
     features: [
       {
@@ -554,10 +754,26 @@ export const services: Service[] = [
       "24/7 monitoring and advisory support throughout the voyage",
     ],
     process: [
-      { step: "Plan", title: "Initial Route Briefing", text: "Voyage route, cargo and timing are analysed for optimisation." },
-      { step: "Monitor", title: "Daily Updates", text: "Weather and oceanographic data is analysed for routing adjustments." },
-      { step: "Advise", title: "Performance Guidance", text: "Optimised speed and heading recommendations are provided." },
-      { step: "Report", title: "Post-Voyage Analysis", text: "Detailed fuel efficiency report and improvement recommendations are issued." },
+      {
+        step: "Plan",
+        title: "Initial Route Briefing",
+        text: "Voyage route, cargo and timing are analysed for optimisation.",
+      },
+      {
+        step: "Monitor",
+        title: "Daily Updates",
+        text: "Weather and oceanographic data is analysed for routing adjustments.",
+      },
+      {
+        step: "Advise",
+        title: "Performance Guidance",
+        text: "Optimised speed and heading recommendations are provided.",
+      },
+      {
+        step: "Report",
+        title: "Post-Voyage Analysis",
+        text: "Detailed fuel efficiency report and improvement recommendations are issued.",
+      },
     ],
     features: [
       {

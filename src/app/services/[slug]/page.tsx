@@ -179,7 +179,6 @@ export default async function ServicePage({
           </div>
           <ServiceFAQ items={faqs} />
         </div>
-        </div>
       </section>
 
       {relatedServices.length > 0 && (
@@ -211,7 +210,8 @@ export default async function ServicePage({
                     Learn more <ArrowRight className="size-3 transition-transform group-hover:translate-x-1" />
                   </span>
                 </Link>
-              ))}
+              );
+              })}
             </div>
           </div>
         </section>
