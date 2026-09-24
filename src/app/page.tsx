@@ -11,7 +11,6 @@ import {
   CircleCheck,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { HeroVideo } from "@/components/hero-video";
 import { SectionHeader, StatBand, ContactBand, TradeRoute } from "@/components/site-sections";
 
 export const metadata: Metadata = {
@@ -35,6 +34,7 @@ const capabilities = [
   [ShieldCheck, "Coastal Transportation", "Reliable movement across Nigeria and West Africa."],
 ] as const;
 
+const heroImage = "/images/votpi-hero.jpg";
 const terminalImage = "/images/votpi-terminal.jpg";
 const bridgeImage = "/images/votpi-bridge.jpg";
 const partnerLogos = [
@@ -76,7 +76,13 @@ export default function HomePage() {
         }}
       />
       <section className="hero-sea relative min-h-[min(88svh,800px)] overflow-hidden bg-navy-deep text-primary-foreground">
-        <HeroVideo />
+        <img
+          src={heroImage}
+          width={1920}
+          height={1080}
+          alt="Product tanker underway near a coastal energy terminal"
+          className="hero-vessel absolute inset-0 h-full w-full object-cover"
+        />
         <div className="absolute inset-0 bg-gradient-to-r from-navy-deep via-navy-deep/80 to-navy-deep/10" />
         <div className="relative z-10 mx-auto flex min-h-[min(88svh,800px)] max-w-7xl items-center px-5 pb-20 pt-28 md:px-10 md:pb-16">
           <div className="max-w-3xl">
@@ -105,7 +111,7 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-        <div className="absolute bottom-0 right-0 hidden border-l border-t border-primary-foreground/20 bg-navy-deep/70 px-8 py-5 backdrop-blur md:block">
+        <div className="absolute bottom-0 right-0 z-10 hidden border-l border-t border-primary-foreground/20 bg-navy-deep/70 px-8 py-5 backdrop-blur md:block">
           <p className="text-[10px] uppercase tracking-[.22em] text-primary-foreground/60">
             Operating focus
           </p>

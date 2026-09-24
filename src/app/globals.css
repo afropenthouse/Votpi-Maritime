@@ -197,6 +197,24 @@
   }
 }
 
+@keyframes vessel-glide {
+  0% {
+    transform: scale(1.22) translate3d(10%, 0, 0);
+  }
+  100% {
+    transform: scale(1.22) translate3d(-10%, -0.5%, 0);
+  }
+}
+.hero-vessel {
+  animation: vessel-glide 14s ease-in-out infinite alternate;
+  will-change: transform;
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-vessel {
+    animation: none;
+  }
+}
+
 @keyframes partners-marquee {
   to {
     transform: translateX(-50%);
