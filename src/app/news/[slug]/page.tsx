@@ -71,6 +71,36 @@ export default async function NewsDetailPage({ params }: Props) {
                 <p key={i}>{paragraph}</p>
               ))}
             </div>
+            {article.references && article.references.length > 0 && (
+              <section className="mt-12 border-t border-border pt-7">
+                <p className="text-xs font-bold uppercase tracking-[.2em] text-accent">
+                  References & further reading
+                </p>
+                <ul className="mt-4 space-y-3">
+                  {article.references.map((reference, index) => (
+                    <li key={reference.url}>
+                      <a
+                        href={reference.url}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="group inline-flex items-start gap-3 text-sm leading-6 text-foreground transition hover:text-accent"
+                      >
+                        <span className="mt-0.5 text-[10px] font-bold text-accent">
+                          0{index + 1}
+                        </span>
+                        <span className="underline decoration-border underline-offset-4 group-hover:decoration-accent">
+                          {reference.title}
+                        </span>
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+                <p className="mt-5 text-xs leading-5 text-muted-foreground">
+                  These sources provide general industry context. Always refer to current rules and
+                  voyage-specific requirements.
+                </p>
+              </section>
+            )}
             <div className="mt-12">
               <Button asChild variant="outline" size="lg">
                 <Link href="/news">
@@ -109,7 +139,9 @@ export default async function NewsDetailPage({ params }: Props) {
                 <dd className="mt-1 text-foreground">
                   {article.verified
                     ? "Verified against operational records"
-                    : "Pending internal approval"}
+                    : article.category === "industry-insight"
+                      ? "Editorial overview; references linked below"
+                      : "Editorial content"}
                 </dd>
               </div>
             </dl>

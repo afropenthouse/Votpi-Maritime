@@ -11,6 +11,7 @@ export type ContentPageData = {
   statement?: string;
   items: { title: string; text: string; href?: string }[];
   note?: string;
+  supporting?: { eyebrow: string; title: string; text: string; items: string[] };
 };
 
 export function ContentPage({ data }: { data: ContentPageData }) {
@@ -40,6 +41,29 @@ export function ContentPage({ data }: { data: ContentPageData }) {
           )}
         </div>
       </section>
+      {data.supporting && (
+        <section className="bg-background py-20">
+          <div className="mx-auto grid max-w-7xl gap-12 px-5 md:grid-cols-[.8fr_1.2fr] md:px-10">
+            <div>
+              <p className="text-xs font-bold uppercase tracking-[.22em] text-accent">
+                {data.supporting.eyebrow}
+              </p>
+              <h2 className="mt-4 text-4xl font-semibold uppercase md:text-5xl">
+                {data.supporting.title}
+              </h2>
+              <p className="mt-5 leading-7 text-muted-foreground">{data.supporting.text}</p>
+            </div>
+            <div className="grid gap-0 sm:grid-cols-2">
+              {data.supporting.items.map((item, i) => (
+                <div key={item} className="border-t border-border py-5">
+                  <span className="text-xs font-bold text-accent">0{i + 1}</span>
+                  <p className="mt-2 text-sm font-semibold">{item}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
       <ContactBand />
     </main>
   );

@@ -124,22 +124,24 @@ export function PageHero({
   imageAlt: string;
 }) {
   return (
-    <section className="relative flex min-h-[620px] items-start overflow-hidden bg-navy-deep text-primary-foreground md:min-h-[680px]">
+    <section className="page-hero relative flex min-h-[clamp(420px,58svh,600px)] items-end overflow-hidden bg-navy-deep text-primary-foreground">
       <img
         src={image}
         width={960}
         height={960}
         alt={imageAlt}
-        className="absolute inset-0 h-full w-full object-cover"
+        className="absolute inset-0 h-full w-full object-cover object-center"
       />
       <div className="absolute inset-0 bg-gradient-to-r from-navy-deep via-navy-deep/75 to-navy-deep/10" />
       <div className="absolute inset-0 bg-gradient-to-t from-navy-deep/80 via-transparent to-navy-deep/25" />
-      <div className="relative mx-auto w-full max-w-7xl px-5 pb-8 pt-28 md:px-10 md:pb-12">
-        <p className="text-xs font-bold uppercase tracking-[.22em] text-accent">{eyebrow}</p>
-        <h1 className="mt-5 max-w-5xl text-5xl font-semibold uppercase leading-[.9] sm:text-6xl md:text-8xl">
+      <div className="relative mx-auto w-full max-w-7xl px-5 pb-10 pt-28 sm:pb-12 md:px-10 md:pb-14">
+        <p className="text-[10px] font-bold uppercase tracking-[.24em] text-accent sm:text-xs">
+          {eyebrow}
+        </p>
+        <h1 className="mt-4 max-w-4xl text-[clamp(2.25rem,5.3vw,5rem)] font-semibold uppercase leading-[.94]">
           {title}
         </h1>
-        <p className="mt-7 max-w-2xl text-base leading-7 text-primary-foreground/80 md:text-lg md:leading-8">
+        <p className="mt-4 max-w-xl text-sm leading-6 text-primary-foreground/80 md:text-base md:leading-7">
           {intro}
         </p>
       </div>

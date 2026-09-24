@@ -8,12 +8,13 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
 const nav = [
+  ["/", "Home"],
   ["/about", "About"],
-  ["/fleet", "Fleet"],
   ["/services", "Services"],
   ["/operations", "Operations"],
   ["/trading-areas", "Trading areas"],
   ["/hseq", "HSEQ"],
+  ["/careers", "Careers"],
   ["/compliance", "Compliance"],
   ["/news", "Insights"],
 ] as const;
@@ -47,7 +48,7 @@ export function SiteHeader() {
           ))}
         </nav>
         <div className="hidden xl:ml-4 xl:block">
-          <Button asChild variant="maritime" size="lg">
+          <Button asChild variant="maritime" size="sm">
             <Link href="/contact">Request capacity</Link>
           </Button>
         </div>
@@ -71,13 +72,6 @@ export function SiteHeader() {
               {label}
             </Link>
           ))}
-          <Link
-            href="/careers"
-            onClick={() => setOpen(false)}
-            className="block border-b border-primary-foreground/10 py-3 text-sm font-semibold uppercase"
-          >
-            Careers
-          </Link>
           <Link
             href="/contact"
             onClick={() => setOpen(false)}
@@ -113,7 +107,6 @@ export function SiteFooter() {
           <h2 className="text-sm font-semibold uppercase">Company</h2>
           <div className="mt-5 grid gap-3 text-sm text-primary-foreground/65">
             <Link href="/about">About us</Link>
-            <Link href="/fleet">Our fleet</Link>
             <Link href="/services">Services</Link>
             <Link href="/hseq">HSEQ</Link>
             <Link href="/careers">Careers</Link>

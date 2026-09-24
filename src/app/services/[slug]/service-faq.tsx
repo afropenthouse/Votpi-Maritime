@@ -14,7 +14,7 @@ type FAQItem = {
 
 export default function ServiceFAQ({ items }: { items: FAQItem[] }) {
   return (
-    <Accordion type="single" collapsible className="mt-12">
+    <Accordion type="single" collapsible>
       {items.map((item, i) => (
         <AccordionItem key={item.q} value={`item-${i}`}>
           <AccordionTrigger className="text-base font-semibold uppercase hover:no-underline">

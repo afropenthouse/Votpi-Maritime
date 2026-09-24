@@ -112,7 +112,7 @@ export default function FleetPage() {
     <main>
       <PageHero
         eyebrow="Our fleet"
-        title="Fleet portfolio"
+        title="Capacity for coastal energy routes"
         intro="Decision-ready particulars, transparent operational status and approved technical documentation for every vessel in our portfolio."
         image="/images/hero-fleet.jpg"
         imageAlt="Modern petroleum product tanker underway in open Atlantic waters"
