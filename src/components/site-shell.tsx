@@ -133,7 +133,7 @@ export function SiteFooter() {
             </a>
             <p className="flex gap-3">
               <MapPin className="size-4 shrink-0 text-accent" />
-              Lekki Phase 1, Lagos, Nigeria
+              Plot 1B, Block 57A, Sikiru Alade Oloko Crescent, Lekki Phase 1, Lagos, Nigeria.
             </p>
           </div>
         </div>

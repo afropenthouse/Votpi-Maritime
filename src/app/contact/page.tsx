@@ -50,8 +50,7 @@ export default function ContactPage() {
             </a>
             <p className="flex gap-3">
               <MapPin className="mt-1 size-4 shrink-0 text-accent" />
-              Unit 2, No. 14 John Chuks Nnadi Drive, off Africa Lane, off Admiralty Way, Lekki Phase
-              1, Lagos.
+              Plot 1B, Block 57A, Sikiru Alade Oloko Crescent, Lekki Phase 1, Lagos, Nigeria.
             </p>
             <p className="flex gap-3">
               <MapPin className="mt-1 size-4 shrink-0 text-accent" />

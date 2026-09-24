@@ -119,7 +119,7 @@ Professional careers page (attract talent for marine operations, logistics, comp
 **11. Contact Us**  
 Full contact details:
 
-- Address options from documents (use both or primary as directed): Unit 2, No. 14, John Chuks Nnadi Drive, Off Africa Lane, Off Admiralty Way, Lekki Phase 1, Lagos; and/or 3/5 Imam Dauda Street, Off Eric Moore, Surulere, Lagos.
+- Address options from documents (use both or primary as directed): Plot 1B, Block 57A, Sikiru Alade Oloko Crescent, Lekki Phase 1, Lagos, Nigeria; and/or 3/5 Imam Dauda Street, Off Eric Moore, Surulere, Lagos.
 - Email: info@votpimaritime.com / daniel.manuwa@votpimaritime.com
 - Phone: 0813 857 7307 / +234-9134972232  
   Charter Enquiry form fields: Product, Quantity, Loading location, Discharge location, Required loading date, Required vessel size, Charter requirements, Contact details.  
