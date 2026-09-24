@@ -32,7 +32,7 @@ export function StatBand() {
         {[
           ["9+", "Years of experience"],
           ["250+", "Projects completed"],
-          ["163,995 MT", "Handled since June 2025"],
+          ["500,000+ MT", "Cargo handled to date"],
         ].map(([n, l]) => (
           <div key={l} className="bg-primary px-8 py-12">
             <strong className="font-display text-5xl font-semibold text-accent">{n}</strong>
