@@ -25,7 +25,9 @@ export default function CareersPage() {
         <div className="absolute inset-0 bg-gradient-to-r from-navy-deep/90 via-navy-deep/55 to-navy-deep/10" />
         <div className="relative mx-auto w-full max-w-7xl px-5 pb-9 pt-28 md:px-10 md:pb-12">
           <p className="text-xs font-bold uppercase tracking-[.22em] text-accent">VOTPI Maritime</p>
-          <h1 className="mt-3 text-5xl font-semibold uppercase leading-none md:text-7xl">Careers</h1>
+          <h1 className="mt-3 text-5xl font-semibold uppercase leading-none md:text-7xl">
+            Careers
+          </h1>
           <p className="mt-4 max-w-xl text-sm leading-6 text-white/80 md:text-base">
             Career opportunities with VOTPI Maritime.
           </p>
