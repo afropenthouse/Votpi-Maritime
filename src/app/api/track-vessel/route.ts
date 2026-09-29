@@ -12,6 +12,61 @@ function getApiError(payload: unknown, fallback: string) {
   return typeof message === "string" && message.trim() ? message : fallback;
 }
 
+async function reverseGeocodeAtZoom(
+  latitude: number,
+  longitude: number,
+  zoom: string,
+): Promise<string | null> {
+  const params = new URLSearchParams({
+    format: "jsonv2",
+    lat: String(latitude),
+    lon: String(longitude),
+    zoom,
+    addressdetails: "1",
+  });
+  try {
+    const response = await fetch(`https://nominatim.openstreetmap.org/reverse?${params}`, {
+      headers: { "User-Agent": "VOTPI Maritime vessel tracking https://votpimaritime.com" },
+      signal: AbortSignal.timeout(5000),
+      next: { revalidate: 86400 },
+    });
+    if (!response.ok) return null;
+
+    const payload: unknown = await response.json();
+    if (!isRecord(payload)) return null;
+    const address = isRecord(payload["address"]) ? payload["address"] : null;
+    const parts = address
+      ? [
+          address["neighbourhood"],
+          address["suburb"],
+          address["city"],
+          address["town"],
+          address["village"],
+          address["county"],
+          address["state_district"],
+          address["state"],
+          address["sea"],
+          address["ocean"],
+          address["country"],
+        ].filter((part): part is string => typeof part === "string" && part.length > 0)
+      : [];
+
+    const label = [...new Set(parts)].slice(0, 3).join(", ");
+    if (label) return label;
+    const name = payload["name"] ?? payload["display_name"];
+    return typeof name === "string" && name.trim() ? name : null;
+  } catch {
+    return null;
+  }
+}
+
+async function reverseGeocode(latitude: number, longitude: number): Promise<string | null> {
+  return (
+    (await reverseGeocodeAtZoom(latitude, longitude, "10")) ??
+    (await reverseGeocodeAtZoom(latitude, longitude, "5"))
+  );
+}
+
 export async function POST(request: Request) {
   const apiKey = process.env["VESSELAPI_API_KEY"];
   if (!apiKey) {
@@ -86,14 +141,23 @@ export async function POST(request: Request) {
       return NextResponse.json({ position: null });
     }
 
+    const latitudeNumber = Number(latitude);
+    const longitudeNumber = Number(longitude);
+    const location =
+      Number.isFinite(latitudeNumber) && Number.isFinite(longitudeNumber)
+        ? await reverseGeocode(latitudeNumber, longitudeNumber)
+        : null;
+
     return NextResponse.json({
       position: {
         NAME: record["vessel_name"] ?? record["name"] ?? record["NAME"],
-        IMO: record["imo"] ?? record["IMO"],
-        MMSI: record["mmsi"] ?? record["MMSI"],
+        IMO: record["imo"] ?? record["IMO"] ?? (idType === "imo" ? reference : undefined),
+        MMSI: record["mmsi"] ?? record["MMSI"] ?? (idType === "mmsi" ? reference : undefined),
         TIMESTAMP: record["timestamp"] ?? record["TIMESTAMP"],
         LATITUDE: latitude,
         LONGITUDE: longitude,
+        LOCATION: location ?? record["zone"] ?? record["ZONE"] ?? null,
+        LOCATION_IS_APPROXIMATE: Boolean(location),
         SPEED: record["sog"] ?? record["SPEED"],
         DESTINATION: record["destination"] ?? record["DESTINATION"],
         ETA: record["eta"] ?? record["ETA"],

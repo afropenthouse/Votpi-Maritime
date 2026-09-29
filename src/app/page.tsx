@@ -151,6 +151,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      <ShipmentTracking />
       <section className="bg-background py-24">
         <div className="mx-auto grid max-w-7xl gap-14 px-5 md:grid-cols-[.9fr_1.1fr] md:px-10">
           <SectionHeader eyebrow="Who we are" title="Built around the downstream energy chain" />
@@ -296,7 +297,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-      <ShipmentTracking />
       <section className="bg-background py-24">
         <div className="mx-auto grid max-w-7xl gap-12 px-5 md:grid-cols-2 md:px-10">
           <div>
