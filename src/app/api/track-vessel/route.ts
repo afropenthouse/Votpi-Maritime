@@ -74,12 +74,12 @@ export async function POST(request: Request) {
     const record = isRecord(payload["vesselPosition"])
       ? payload["vesselPosition"]
       : isRecord(payload["vessel_position"])
-      ? payload["vessel_position"]
-      : isRecord(payload["vessel"])
-        ? payload["vessel"]
-        : isRecord(payload["position"])
-          ? payload["position"]
-          : payload;
+        ? payload["vessel_position"]
+        : isRecord(payload["vessel"])
+          ? payload["vessel"]
+          : isRecord(payload["position"])
+            ? payload["position"]
+            : payload;
     const latitude = record["latitude"] ?? record["LATITUDE"];
     const longitude = record["longitude"] ?? record["LONGITUDE"];
     if (latitude == null || longitude == null) {

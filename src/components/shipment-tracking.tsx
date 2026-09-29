@@ -56,7 +56,10 @@ export function ShipmentTracking() {
         </div>
         <div>
           <h2 className="text-3xl font-semibold md:text-4xl">Track Your Shipment</h2>
-          <form onSubmit={handleSubmit} className="mt-6 flex flex-col gap-4 sm:flex-row sm:items-center">
+          <form
+            onSubmit={handleSubmit}
+            className="mt-6 flex flex-col gap-4 sm:flex-row sm:items-center"
+          >
             <label htmlFor="vessel-reference" className="sr-only">
               Vessel IMO or MMSI number
             </label>
@@ -71,22 +74,43 @@ export function ShipmentTracking() {
               placeholder="Vessel IMO or MMSI number"
               className="h-14 w-full rounded-full border-0 bg-white px-5 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent sm:flex-1"
             />
-            <Button type="submit" variant="default" size="lg" disabled={loading} className="h-14 rounded-full px-8">
+            <Button
+              type="submit"
+              variant="default"
+              size="lg"
+              disabled={loading}
+              className="h-14 rounded-full px-8"
+            >
               {loading ? "SEARCHING..." : "SUBMIT NOW"}
             </Button>
           </form>
           {(message || position) && (
-            <div aria-live="polite" className="mt-5 rounded-md bg-primary-foreground/10 p-4 text-sm">
+            <div
+              aria-live="polite"
+              className="mt-5 rounded-md bg-primary-foreground/10 p-4 text-sm"
+            >
               {message ? (
                 <p>{message}</p>
               ) : position ? (
                 <div className="grid gap-2 sm:grid-cols-2">
-                  <p><strong>Vessel:</strong> {position.NAME || "Unknown"}</p>
-                  <p><strong>Destination:</strong> {position.DESTINATION || "Not reported"}</p>
-                  <p><strong>Position:</strong> {position.LATITUDE}, {position.LONGITUDE}</p>
-                  <p><strong>Speed:</strong> {position.SPEED ?? "Not reported"} kn</p>
-                  <p><strong>ETA:</strong> {position.ETA || "Not reported"}</p>
-                  <p><strong>Last AIS update:</strong> {position.TIMESTAMP || "Not reported"}</p>
+                  <p>
+                    <strong>Vessel:</strong> {position.NAME || "Unknown"}
+                  </p>
+                  <p>
+                    <strong>Destination:</strong> {position.DESTINATION || "Not reported"}
+                  </p>
+                  <p>
+                    <strong>Position:</strong> {position.LATITUDE}, {position.LONGITUDE}
+                  </p>
+                  <p>
+                    <strong>Speed:</strong> {position.SPEED ?? "Not reported"} kn
+                  </p>
+                  <p>
+                    <strong>ETA:</strong> {position.ETA || "Not reported"}
+                  </p>
+                  <p>
+                    <strong>Last AIS update:</strong> {position.TIMESTAMP || "Not reported"}
+                  </p>
                 </div>
               ) : null}
             </div>
