@@ -30,7 +30,7 @@ export function StatBand() {
     <section className="bg-primary text-primary-foreground">
       <div className="mx-auto grid max-w-7xl gap-px bg-primary-foreground/15 md:grid-cols-3">
         {[
-          ["9+", "Years of experience"],
+          ["2+", "Years of experience"],
           ["250+", "Projects completed"],
           ["500,000+ MT", "Cargo handled to date"],
         ].map(([n, l]) => (

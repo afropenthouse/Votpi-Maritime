@@ -11,6 +11,7 @@ import {
   CircleCheck,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { ShipmentTracking } from "@/components/shipment-tracking";
 import { SectionHeader, StatBand, ContactBand, TradeRoute } from "@/components/site-sections";
 
 export const metadata: Metadata = {
@@ -295,6 +296,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      <ShipmentTracking />
       <section className="bg-background py-24">
         <div className="mx-auto grid max-w-7xl gap-12 px-5 md:grid-cols-2 md:px-10">
           <div>

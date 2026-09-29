@@ -135,6 +135,10 @@ export function SiteFooter() {
               <MapPin className="size-4 shrink-0 text-accent" />
               Plot 1B, Block 57A, Sikiru Alade Oloko Crescent, Lekki Phase 1, Lagos, Nigeria.
             </p>
+            <p className="flex gap-3">
+              <MapPin className="size-4 shrink-0 text-accent" />
+              3/5 Imam Dauda Street, off Eric Moore, Surulere, Lagos.
+            </p>
           </div>
         </div>
       </div>
