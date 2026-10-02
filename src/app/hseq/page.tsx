@@ -12,6 +12,7 @@ import {
   UsersRound,
   Waves,
 } from "lucide-react";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { ContactBand, PageHero, SectionHeader } from "@/components/site-sections";
 
@@ -212,11 +213,13 @@ export default function HseqPage() {
           </div>
         </div>
         <div className="relative min-h-[360px] overflow-hidden bg-navy-deep lg:min-h-[560px]">
-          <img
+          <Image
             src="/images/votpi-bridge.jpg"
             alt="Marine officers monitoring a tanker voyage from the bridge"
+            fill
+            sizes="(max-width: 1024px) 100vw, 50vw"
             loading="lazy"
-            className="absolute inset-0 h-full w-full object-cover"
+            className="object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-navy-deep/75 via-transparent to-navy-deep/10" />
           <p className="absolute bottom-6 left-6 text-[10px] font-bold uppercase tracking-[.22em] text-white/80 md:bottom-9 md:left-9">

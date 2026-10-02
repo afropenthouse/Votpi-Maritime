@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -125,10 +126,10 @@ export function PageHero({
 }) {
   return (
     <section className="page-hero relative flex min-h-[clamp(420px,58svh,600px)] items-end overflow-hidden bg-navy-deep text-primary-foreground">
-      <img
+      <Image
         src={image}
-        width={960}
-        height={960}
+        fill={true}
+        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
         alt={imageAlt}
         className="absolute inset-0 h-full w-full object-cover object-center"
       />

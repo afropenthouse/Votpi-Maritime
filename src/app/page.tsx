@@ -13,6 +13,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { ShipmentTracking } from "@/components/shipment-tracking";
 import { SectionHeader, StatBand, ContactBand, TradeRoute } from "@/components/site-sections";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "VOTPI Maritime | Marine Transportation Nigeria & West Africa",
@@ -82,12 +83,12 @@ export default function HomePage() {
         }}
       />
       <section className="hero-sea relative min-h-[min(88svh,800px)] overflow-hidden bg-navy-deep text-primary-foreground">
-        <img
+        <Image
           src={heroImage}
-          width={1920}
-          height={1080}
+          fill
+          sizes="100vw"
           alt="Product tanker underway near a coastal energy terminal"
-          className="hero-vessel absolute inset-0 h-full w-full object-cover"
+          className="hero-vessel object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-navy-deep via-navy-deep/80 to-navy-deep/10" />
         <div className="relative z-10 mx-auto flex min-h-[min(88svh,800px)] max-w-7xl items-center px-5 pb-20 pt-28 md:px-10 md:pb-16">
@@ -143,7 +144,7 @@ export default function HomePage() {
               >
                 {partnerLogos.map((src) => (
                   <li key={src} className="partner-logo-item">
-                    <img src={src} alt="" loading="lazy" />
+                    <Image src={src} alt="" loading="lazy" width={180} height={60} />
                   </li>
                 ))}
               </ul>
@@ -187,7 +188,7 @@ export default function HomePage() {
       </section>
       <section className="grid bg-navy-deep text-primary-foreground lg:grid-cols-2">
         <div className="min-h-[430px]">
-          <img
+          <Image
             src={terminalImage}
             loading="lazy"
             width={1600}
@@ -320,7 +321,7 @@ export default function HomePage() {
               ))}
             </div>
           </div>
-          <img
+          <Image
             src={bridgeImage}
             loading="lazy"
             width={1600}

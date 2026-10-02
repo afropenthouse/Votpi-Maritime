@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Mail, MapPin, Menu, Phone, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -27,9 +28,11 @@ export function SiteHeader() {
     <header className="absolute inset-x-0 top-0 z-50 border-b border-primary-foreground/20 text-primary-foreground">
       <div className="mx-auto flex h-24 max-w-7xl items-center justify-between px-5 md:px-10">
         <Link href="/" aria-label="VOTPI Maritime home">
-          <img
+          <Image
             src="/votpi-logo.png"
             alt="VOTPI Maritime"
+            width={200}
+            height={80}
             className="h-14 w-auto brightness-0 invert"
           />
         </Link>
@@ -90,9 +93,11 @@ export function SiteFooter() {
     <footer className="bg-navy-deep text-primary-foreground">
       <div className="mx-auto grid max-w-7xl gap-12 px-5 py-16 md:grid-cols-[1.2fr_.8fr_.8fr] md:px-10">
         <div>
-          <img
+          <Image
             src="/votpi-logo.png"
             alt="VOTPI Maritime"
+            width={220}
+            height={88}
             className="h-20 w-auto brightness-0 invert"
           />
           <p className="mt-5 max-w-md text-sm leading-6 text-primary-foreground/60">

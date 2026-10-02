@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, BadgeCheck, Radio, Ship } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
@@ -70,10 +71,12 @@ function VesselCard({ vessel }: { vessel: Vessel }) {
     >
       <div className="relative aspect-[16/9] overflow-hidden rounded-t-lg bg-steel/10">
         {vessel.image ? (
-          <img
+          <Image
             src={vessel.image}
             alt={vessel.imageAlt ?? vessel.name}
-            className="size-full object-cover group-hover:scale-[1.02] transition-transform"
+            fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            className="object-cover group-hover:scale-[1.02] transition-transform"
           />
         ) : (
           <div className="flex size-full items-center justify-center">

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { ArrowLeft, ArrowRight, Check, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -93,10 +94,12 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
               </Button>
             </div>
             <div className="group relative min-h-[260px] overflow-hidden bg-navy-deep sm:min-h-[340px]">
-              <img
+              <Image
                 src={service.image}
                 alt={service.imageAlt}
-                className="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-105"
+                fill={true}
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="object-cover transition duration-700 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-navy-deep/70 via-transparent to-navy-deep/10" />
               <div className="absolute bottom-5 left-5 text-[10px] font-bold uppercase tracking-[.22em] text-white/80">

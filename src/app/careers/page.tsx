@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { BriefcaseBusiness } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -17,10 +18,12 @@ export default function CareersPage() {
   return (
     <main>
       <section className="relative flex min-h-[340px] items-end overflow-hidden bg-navy-deep text-primary-foreground md:min-h-[390px]">
-        <img
+        <Image
           src="/images/hero-careers.jpg"
           alt="Marine officers working together aboard a tanker"
-          className="absolute inset-0 h-full w-full object-cover object-center"
+          fill
+          sizes="100vw"
+          className="object-cover object-center"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-navy-deep/90 via-navy-deep/55 to-navy-deep/10" />
         <div className="relative mx-auto w-full max-w-7xl px-5 pb-9 pt-28 md:px-10 md:pb-12">

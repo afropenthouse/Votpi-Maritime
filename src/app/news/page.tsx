@@ -4,6 +4,7 @@ import { ArrowRight, BookOpen, Calendar, Clock, ExternalLink } from "lucide-reac
 import { Button } from "@/components/ui/button";
 import { ContactBand, PageHero } from "@/components/site-sections";
 import { NEWS_CATEGORY_LABELS, latestNews } from "@/lib/news-data";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "News & Insights | VOTPI Maritime",
@@ -72,10 +73,12 @@ export default function NewsPage() {
                 href={`/news/${featured.slug}`}
                 className="relative block min-h-[300px] overflow-hidden bg-navy-deep lg:min-h-[440px]"
               >
-                <img
+                <Image
                   src={featured.image}
                   alt={featured.imageAlt}
-                  className="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-105"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover transition duration-700 group-hover:scale-105"
                 />
                 <span className="absolute left-5 top-5 bg-accent px-3 py-1.5 text-[10px] font-bold uppercase tracking-widest text-accent-foreground">
                   Featured insight
@@ -113,11 +116,13 @@ export default function NewsPage() {
                   href={`/news/${article.slug}`}
                   className="relative block h-56 overflow-hidden bg-navy-deep"
                 >
-                  <img
+                  <Image
                     src={article.image}
                     alt={article.imageAlt}
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     loading="lazy"
-                    className="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-105"
+                    className="object-cover transition duration-700 group-hover:scale-105"
                   />
                   <span className="absolute left-4 top-4 bg-navy-deep/85 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-white backdrop-blur">
                     0{index + 2} / Insight

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowDown, ArrowRight, Compass } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { PageHero, ContactBand } from "@/components/site-sections";
@@ -65,11 +66,13 @@ export default function ServicesPage() {
                   href={`/services/${service.slug}`}
                   className="service-card group relative flex min-h-[360px] flex-col justify-between overflow-hidden bg-navy-deep text-primary-foreground"
                 >
-                  <img
+                  <Image
                     src={service.image}
                     alt={service.imageAlt}
+                    fill={true}
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     loading="lazy"
-                    className="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-105"
+                    className="object-cover transition duration-700 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-navy-deep via-navy-deep/70 to-navy-deep/15 transition duration-500 group-hover:via-navy-deep/55" />
                   <div className="relative flex items-start justify-between p-6 md:p-7">

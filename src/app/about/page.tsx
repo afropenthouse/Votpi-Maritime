@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowDownRight, ArrowRight, Anchor, Target, Eye } from "lucide-react";
 import { PageHero, StatBand, ContactBand, SectionHeader } from "@/components/site-sections";
@@ -32,13 +33,15 @@ export default function AboutPage() {
       <section className="bg-background py-16 md:py-24">
         <div className="mx-auto grid max-w-7xl gap-10 px-5 md:px-10 lg:grid-cols-[1.05fr_.95fr] lg:items-center lg:gap-16">
           <div className="group relative min-h-[380px] overflow-hidden bg-navy-deep md:min-h-[520px]">
-            <img
+            <Image
               src={terminalImage}
               loading="lazy"
               width={1600}
               height={1000}
+              fill
+              sizes="(max-width: 1024px) 100vw, 50vw"
               alt="Tanker operating at a petroleum terminal"
-              className="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-105"
+              className="object-cover transition duration-700 group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-navy-deep/90 via-transparent to-transparent" />
             <div className="absolute bottom-0 left-0 p-7 text-primary-foreground md:p-10">

@@ -10,6 +10,7 @@ import {
   Ship,
   Waves,
 } from "lucide-react";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { ContactBand, PageHero, SectionHeader } from "@/components/site-sections";
 
@@ -144,11 +145,13 @@ export default function OperationsPage() {
 
       <section id="coordination" className="scroll-mt-16 grid bg-mist lg:grid-cols-2">
         <div className="relative min-h-[360px] overflow-hidden bg-navy-deep lg:min-h-[600px]">
-          <img
+          <Image
             src="/images/votpi-bridge.jpg"
             alt="Marine officers coordinating a tanker voyage from the bridge"
+            fill
+            sizes="(max-width: 1024px) 100vw, 50vw"
             loading="lazy"
-            className="absolute inset-0 h-full w-full object-cover"
+            className="object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-navy-deep/70 via-transparent to-transparent" />
           <p className="absolute bottom-6 left-6 text-[10px] font-bold uppercase tracking-[.22em] text-white/80 md:bottom-9 md:left-9">
